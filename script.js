@@ -1,34 +1,29 @@
-let x=0
-let z=0
-let y
-let l = document.getElementById("licznik")
-let pscore = document.querySelector("#score")
+let licz=-1;
+let wyn=0;
+let check;
+let l = document.getElementById("licznik");
+let w = document.getElementById("wynik");
+let c = document.getElementById("sprawdz")
 
-function check_num(x){
-    var reg = /[0-9]/g;
-    var ntab = x.match(reg);
-    if(ntab!=null) (y=1);
-    else (y=0);
+function licznik(){
+    licz++;
+    l.innerHTML = licz;
+
+    wynik();
 }
 
-function licznik()
-{
-    l.innerHTML = x
-    x++
+function wynik(){
+    w.innerText = "wynik: " + wyn;
 }
 
-function wynik()
-{
-    pscore.innerText = "wynik: " + z
+function graj(){
+    //check_num();
+    if(licz%7==0 || licz.toString().indexOf(toString(7)) >= -1){
+        wyn++;
+    }else{
+        wyn--;
+    }
 }
 
-function graj()
-{
-    if(x%7==0){z++}
-    else if(y==1){z++}
-    else{z--}
-}
+let interval = setInterval(licznik, 1000);
 
-
-
-let interval = setInterval(licznik, 2000)

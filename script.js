@@ -24,5 +24,10 @@ function graj(){
     }
 }
 
-let interval = setInterval(licznik, 1000);
+let interval = setInterval(licznik, 750);
+
+function stop(){
+    clearInterval(interval);
+    alert("koniec, twój wynik to " + wyn)
+}
 

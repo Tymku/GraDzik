@@ -17,8 +17,7 @@ function wynik(){
 }
 
 function graj(){
-    //check_num();
-    if(licz%7==0 || licz.toString().indexOf(toString(7)) >= -1){
+    if(licz%7==0 || licz.toString().indexOf("7") >= -1){
         wyn++;
     }else{
         wyn--;
